@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Species Detail{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bird_species.css' %}">
+
+
+  <div class="container species-details">
+    <div class="header">
+      <h1>Classified Birds Species Details</h1>
+    </div>
+
+    <div class="species-image">
+      <img src="{{ image_url }}" alt="Classified Image">
+    </div>
+
+    <div class="details">
+      <h2>Status Code: {{ species.status_code }}</h2>
+      <h3>Common Name: {{ species.common_name }}</h3>
+      <h3>Scientific Name: {{ species.scientific_name }}</h3>
+      <h3> Current Status:{{species.current_status}}</h3>
+    </div>
+
+    <div class="bird-description">
+      <p>Bird Description:{{ species.bird_description }}</p>
+    </div>
+    <div class="classified">
+      <p>Classified at: {{ current_time }}</p>
+  </div>
+</div>
+  </div>
+{% endblock %}

@@ -1,0 +1,89 @@
+body {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url('/static/images/aa.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+    height: 100vh;
+}
+
+.container.species-details {
+    width: 70%; 
+    max-width: 800px; /* Set a maximum width */
+    height: auto; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter background */
+    border: 2px solid #2E2E2E; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Slightly increased shadow */
+    text-align: left;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.header {
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.header h1 {
+    color: #2E2E2E; 
+    font-size: 24px; 
+}
+
+.species-image {
+    width: 100%;
+    max-width: 150px; 
+    height: 150px; 
+    overflow: hidden;
+    margin-right: -70px; 
+}
+
+.species-image img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.details {
+    margin-top: -10px; 
+    text-align: left;
+    margin-left: auto;
+}
+
+.details h2,
+.details h3 {
+    margin: 10px 0;
+    color: #2E2E2E;; /* Green color */
+    font-size: 22px; /* Increase font size */
+}
+
+.bird-description {
+    margin-top: 1px; /* Adjust as needed */
+    text-align: justify; /* Justify text for a cleaner look */
+    color: #2E2E2E; /* Darker text color for better contrast */
+    line-height: 1.6; 
+    font-size: 16px; /* A
+}
+
+.bird-description strong {
+    color: #4CAF50; /* Green color for strong/bold text */
+}
+.classified {
+    width: 100%; /* Full width for the classified section */
+    text-align: center; /* Align text to the right */
+    margin-top: -10px; /* Add some spacing above the classified section */
+    color: orange; /* Dark gray text color */
+    font-size: 16px; 
+}

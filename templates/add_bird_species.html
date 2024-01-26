@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bird Species</title>
+    <style>
+        body {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('{% static "images/a1.jpg" %}');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-left: -100px; /* Adjust the margin as needed */
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            margin-left: -100px; /* Adjust the margin as needed */
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: orange;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Add Bird Species</h1>
+</header>
+
+<div class="container">
+    <form method="post" action="{% url 'add_bird_species' %}">
+        {% csrf_token %}
+
+        <label for="status_code">Status Code:</label>
+        <input type="text" id="status_code" name="status_code" required>
+
+        <label for="current_status">Current Status:</label>
+        <input type="text" id="current_status" name="current_status" required>
+
+        <label for="common_name">Common Name:</label>
+        <input type="text" id="common_name" name="common_name" required>
+
+        <label for="scientific_name">Scientific Name:</label>
+        <input type="text" id="scientific_name" name="scientific_name" required>
+
+        <label for="bird_description">Bird Description:</label>
+        <textarea id="bird_description" name="bird_description" required></textarea>
+
+        <button type="submit">Add Bird Species</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}">
+    <style>
+        body {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('{% static "images/aa.jpg" %}');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bird Classification Using Deep Learning</h1>
+    </header>
+
+    <main>
+        <section id="insert-picture">
+            <h2>Insert a Picture to Check</h2>
+            <form method="POST" id="image-upload-form" enctype="multipart/form-data" action="{% url 'renderHome' %}">
+                {% csrf_token %}
+                <input name="image" type="file" id="image-upload" accept="image/*" onchange="previewImage()">
+                <button type="submit" id="classifyButton">Classify</button>
+                {% if predicted_species %}
+                    <strong><p>Classified Image: {{ predicted_species.common_name }}</p></strong>
+                {% endif %}
+            </form>
+            
+    
+
+
+
+</section>
+</main>
+
+
+    <footer>
+        <p>© 2024 Bird Classification. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
