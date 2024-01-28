@@ -16,74 +16,80 @@ body {
 }
 
 .container.species-details {
-    width: 70%; 
-    max-width: 800px; /* Set a maximum width */
-    height: auto; 
+    width: 70%;
+    max-width: 800px;
+    height: auto;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Lighter background */
-    border: 2px solid #2E2E2E; /* Green border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Slightly increased shadow */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #2E2E2E;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: left;
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    flex-direction: column;
+    align-items: center;
+   
 }
 
 .header {
     text-align: center;
-    width: 100%; 
-    margin-bottom: 20px; 
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .header h1 {
-    color: #2E2E2E; 
-    font-size: 24px; 
+    color: #2E2E2E;
+    font-size: 24px;
 }
 
 .species-image {
     width: 100%;
-    max-width: 150px; 
-    height: 150px; 
+    max-width: 150px;
+    height: 150px;
     overflow: hidden;
-    margin-right: -70px; 
+    margin-right:350px;
 }
 
 .species-image img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: 100%;
+    object-fit: cover;
 }
 
 .details {
-    margin-top: -10px; 
+    margin-top: -160px;
+    flex-grow: 1;
     text-align: left;
     margin-left: auto;
+    min-height: 40px;
+    margin-left: 250px;
 }
 
 .details h2,
 .details h3 {
-    margin: 10px 0;
-    color: #2E2E2E;; /* Green color */
-    font-size: 22px; /* Increase font size */
+    margin: 19px 0;
+    color: #2E2E2E;
+    font-size: 16px;
 }
 
 .bird-description {
-    margin-top: 1px; /* Adjust as needed */
-    text-align: justify; /* Justify text for a cleaner look */
-    color: #2E2E2E; /* Darker text color for better contrast */
-    line-height: 1.6; 
-    font-size: 16px; /* A
+    margin-top: 10px;
+    text-align: justify;
+    color: #2E2E2E;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 .bird-description strong {
-    color: #4CAF50; /* Green color for strong/bold text */
+    color: #4CAF50;
 }
+
 .classified {
-    width: 100%; /* Full width for the classified section */
-    text-align: center; /* Align text to the right */
-    margin-top: -10px; /* Add some spacing above the classified section */
-    color: orange; /* Dark gray text color */
-    font-size: 16px; 
+    width: 100%;
+    text-align: center;
+    margin-top: -10px;
+    color: orange;
+    font-size: 16px;
 }

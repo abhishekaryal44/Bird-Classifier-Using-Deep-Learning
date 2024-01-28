@@ -26,7 +26,7 @@ class BirdSpecies(models.Model):
     common_name = models.CharField(max_length=100, unique=True)
     scientific_name = models.CharField(max_length=100)
     bird_description = models.TextField(blank=True)
-    current_status = models.CharField(max_length=10,choices= My_choice)  # Use the default_status function
+    current_status = models.CharField(max_length=10,choices= My_choice)
 
     def __str__(self):
         return self.common_name
