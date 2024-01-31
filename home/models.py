@@ -22,10 +22,10 @@ class BirdSpecies(models.Model):
     ]
     
 
-    status_code = models.CharField(max_length=2, choices=STATUS_CHOICES)
+    status_code = models.CharField(max_length=2, choices=STATUS_CHOICES,blank=True,null=True)
     common_name = models.CharField(max_length=100, unique=True)
-    scientific_name = models.CharField(max_length=100)
-    bird_description = models.TextField(blank=True)
+    scientific_name = models.CharField(max_length=100,default='default_value',null=True)
+    bird_description = models.TextField(blank=True, null=True,default='default_value')
     current_status = models.CharField(max_length=10,choices= My_choice)
 
     def __str__(self):

@@ -27,7 +27,7 @@ class ClassifiedImageAdmin(admin.ModelAdmin):
         return obj.classified_at.strftime("%Y-%m-%d %H:%M:%S")
 
     image_preview.short_description = 'Image Preview'
-    predicted_species_name.short_description = 'Pr edicted Species'
+    predicted_species_name.short_description = 'Predicted Species'
     classified_at_formatted.short_description = 'Classified At'
 
     fieldsets = (
