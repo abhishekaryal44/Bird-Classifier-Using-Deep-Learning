@@ -4,7 +4,7 @@
 
 <div class="container mx-auto my-8  flex flex-col items-center justify-center">
     <div class=" mb-5">
-        <h1 class="font-bold text-3xl m-0  text-slate-700 uppercase">ADD BIRD SPECIES DETAILS</h1>
+        <h1 class="font-bold text-2xl md:text-3xl m-0  text-slate-700 uppercase">ADD BIRD SPECIES DETAILS</h1>
     </div>
     <form method="post" action="{% url 'add_bird_species' %}" class="w-full  bg-white rounded-md shadow-md p-8 ">
         {% csrf_token %}
