@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}Species Detail{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bird_species.css' %}" />
+
+<div class="flex flex-col items-center">
+    <div class="flex flex-col items-center justify-center ">
+        <div class=" mb-5">
+            <h1 class="font-bold text-3xl m-0  text-slate-700 uppercase">BIRD SPECIES DETAILS</h1>
+        </div>
+        <div class="bg-purple-200 p-10 rounded-md">
+            <div >
+                <div class="flex flex-row justify-center gap-6 md:gap-5">
+                    <div class="max-w-150 h-48 overflow-hidden mr-350 w-60 rounded-md">
+                        <img src="{{ image_url }}" alt="Classified Image" class="" />
+                    </div>
+                    <div class="flex flex-col gap-2 md:gap-4 mt-1">
+                        <h2><span class="font-bold">Status Code:</span> {{ species.status_code }}</h2>
+                        <h3><span class="font-bold">Common Name:</span> {{ species.common_name }}</h3>
+                        <h3><span class="font-bold">Scientific Name:</span> {{ species.scientific_name }}</h3>
+                        <h3><span class="font-bold">Current Status: </span>{{ species.current_status }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center mt-3">
+                <div class="mb-3">
+                    <p><span class="font-bold text-xl">Bird Description: </span>{{ species.bird_description }}</p>
+                </div>
+                <div class="m-3">
+                    <p>Classified At: {{ current_time }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
