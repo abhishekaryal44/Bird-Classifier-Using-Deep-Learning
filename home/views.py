@@ -58,6 +58,7 @@ def add_bird_species(request):
         scientific_name = request.POST.get('scientific_name')
         bird_description = request.POST.get('bird_description')
         current_status = request.POST.get('current_status')
+        wiki_link = request.POST.get('wiki_link')
 
     
         if status_code is not None:
@@ -68,6 +69,7 @@ def add_bird_species(request):
                 scientific_name=scientific_name,
                 bird_description=bird_description,
                 current_status=current_status,
+                wiki_link= wiki_link
             )
 
             # return redirect('/')

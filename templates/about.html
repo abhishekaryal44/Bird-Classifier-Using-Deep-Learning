@@ -1,15 +1,16 @@
-{% extends 'base.html' %} {% block content %}
-<div class="ml-4 md:ml-16 mt-8">
-  <h2
-    class="font-bold text-3xl m-w-40 text-slate-600 uppercase flex justify-center mb-3"
+{% extends 'base.html' %} 
+{% block content %}
+<div class="ml-4 md:mx-16 md:ml-16 mt-8">
+  <!-- <h2
+    class="font-bold text-3xl m-text-slaslate uppercase flex justify-center mb-3"
   >
     About Bird Species Prediction Project
-  </h2>
-
+  </h2> -->
+  <h1 class="text-2xl font-bold mb-2">Introduction</h1>
   <p class="mb-6">
     Welcome to our Bird Species Prediction Project! This project utilizes
-    machine learning to predict the species of a bird based on the provided
-    image.
+    machine learning to predict the Endangered species of a bird based on the provided
+    image.The list of Endangered bird species is collected from the Nepal's National Red List of Birds journal. The dataset for this project is collected from ebird website.
   </p>
 
   <h3 class="text-2xl font-bold mb-2">How It Works</h3>
@@ -21,126 +22,10 @@
 
   <h3 class="text-2xl font-bold mb-2">Supported Bird Species</h3>
   <p class="mb-6">
-    The model supports a wide range of bird species, including but not limited
-    to:
+    The model supports following <span class="font-bold">Endangered Bird Species</span> of Nepal:
   </p>
 
-  <ul class="flex flex-row flex-wrap gap-2 font-md text-sm">
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Abbott’s Babbler Malacocincla abbotti</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Black Bittern (Dupetor flavicollis)</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Blue-eared Kingfisher Alcedo meninting</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Blue-naped Pitta Pitta nipalensis</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Broad-billed Warbler Tickellia hodgsoni</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Cheer Pheasant (Catreus wallichii)</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Chestnut Munia Lonchura atricapilla</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Cinereous Vulture Aegypius monachus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Golden Babbler Stachyris chrysaea</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Goulds Shortwing Brachypteryx stellata</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Great Bittern Botaurus stellaris</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Great Hornbill (Buceros bicornis)</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Great Slaty Woodpecker Mulleripicus pulverulentus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Ibisbill Ibidorhyncha struthersii</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Indian Courser Cursorius coromandelicus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Indian Grassbird - Graminicola bengalensis</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Indian Nightjar Caprimulgus asiaticus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Knob-billed Duck Sarkidiornis melanotos</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Northern Pintail Anas acuta</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Painted Stork Mycteria leucocephala</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Purple Cochoa Cochoa purpurea</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Red-headed Trogon Harpactes erythrocephalus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Red-headed Vulture Sarcogyps calvus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Red-necked Falcon Falco chicquera</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Ruby-cheeked Sunbird Anthreptes singalensis</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Rusty-fronted Barwing Actinodura egertoni</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Saker Falcon Falco cherrug</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Silver-eared Mesia Leiothrix argentauris</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Slaty-legged Crake Rallina eurizonoides</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Spot-bellied Eagle Owl Bubo nipalensis</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Sultan Tit Melanochlora sultanea</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Swamp Francolin Francolinus gularis</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Tawny-bellied Babbler Dumetia hyperythra</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Thick-billed Green Pigeon Treron curvirostra</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>White-throated Bulbul Alophoixus flaveolus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>White-throated Bushchat Saxicola insignis</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Yellow-rumped Honeyguide - Indicator xanthonotus</li>
-    </div>
-    <div class="w-40 bg-gray-600 text-white rounded-md p-2 mb-2">
-      <li>Yellow-vented Warbler Phylloscopus cantator</li>
-    </div>
-  </ul>
+  <ul class="flex flex-row justify-between flex-wrap" id="species-container"></ul>
 
   <h3 class="text-2xl font-bold mb-2">Technologies Used</h3>
   <ul class="list-disc ml-4 md:ml-8 mb-6">
@@ -150,5 +35,223 @@
     <li>TensorFlow for machine learning</li>
     <li>Tailwind Css for Styling</li>
   </ul>
+  <div class="mb-2">
+    <h1 class="text-2xl font-bold">References</h1>
+    <ul class="list-disc ml-4 md:ml-8 mb-6">
+        <li>Journal: <a href="http://doi.org/10.11609/jott.2855.9.1.9700-9722 " class="font-bold text-blue">Link</a> </li>
+        <li>ebird: <a href="https://media.ebird.org/catalog?sort=rating_rank_desc&mediaType=photo " class="font-bold text-blue">Link</a> </li>
+      </ul>
+  </div>
 </div>
+
+<script>
+  const birdSpecies = [
+      {
+          commonName: "Abbott`s Babbler",
+          scientificName: "Malacocincla abbotti",
+          url: "https://en.wikipedia.org/wiki/Abbott%27s_babbler"
+      },
+      {
+          commonName: "Black Bittern",
+          scientificName: "Dupetor flavicollis",
+          url: "https://en.wikipedia.org/wiki/Black_bittern"
+      },
+      {
+          commonName: "Blue-eared Kingfisher",
+          scientificName: "Alcedo meninting",
+          url: "https://en.wikipedia.org/wiki/Blue-eared_kingfisher"
+      },
+      {
+          commonName: "Blue-naped Pitta",
+          scientificName: "Pitta nipalensis",
+          url: "https://en.wikipedia.org/wiki/Blue-naped_pitta"
+      },
+      {
+        commonName: "Broad-billed Warbler",
+        scientificName: "Tickellia hodgsoni",
+        url: 'https://en.wikipedia.org/wiki/Broad-billed_warbler'
+      },
+      {
+        commonName: "Cheer Pheasant",
+        scientificName: "Catreus wallichii",
+        url: 'https://en.wikipedia.org/wiki/Cheer_pheasant'
+      },
+      {
+        commonName: "Chestnut Munia",
+        scientificName: "Lonchura atricapilla",
+        url: 'https://en.wikipedia.org/wiki/Chestnut_munia'
+      },
+      {
+        commonName: "Cinereous Vulture",
+        scientificName: "Aegypius monachus",
+        url: 'https://en.wikipedia.org/wiki/Cinereous_vulture'
+      },
+      {
+        commonName: "Golden Babbler",
+        scientificName: "Stachyris chrysaea",
+        url: 'https://en.wikipedia.org/wiki/Golden_babbler'
+      },
+      {
+        commonName: "Goulds Shortwing",
+        scientificName: "Brachypteryx stellata",
+        url: 'https://en.wikipedia.org/wiki/Gould%27s_shortwing'
+      },
+      {
+        commonName: "Great Bittern",
+        scientificName: "Botaurus stellaris",
+        url: 'https://en.wikipedia.org/wiki/Eurasian_bittern'
+      },
+      {
+        commonName: "Great Hornbill",
+        scientificName: "Buceros bicornis",
+        url: 'https://en.wikipedia.org/wiki/Great_hornbill'
+      },
+      {
+        commonName: "Great Slaty Woodpecker",
+        scientificName: "Mulleripicus pulverulentus",
+        url: 'https://en.wikipedia.org/wiki/Great_slaty_woodpecker'
+      },
+      {
+        commonName: "Ibisbill",
+        scientificName: "Ibidorhyncha struthersii",
+        url: 'https://en.wikipedia.org/wiki/Ibisbill'
+      },
+      {
+        commonName: "Indian Courser",
+        scientificName: "Cursorius coromandelicus",
+        url: 'https://en.wikipedia.org/wiki/Indian_courser'
+      },
+      {
+        commonName: "Indian Grassbird",
+        scientificName: "Graminicola bengalensis",
+        url: 'https://en.wikipedia.org/wiki/Indian_grassbird'
+      },
+      {
+        commonName: "Indian Nightjar",
+        scientificName: "Caprimulgus asiaticus",
+        url: 'https://en.wikipedia.org/wiki/Indian_nightjar'
+      },
+      {
+        commonName: "Knob-billed Duck",
+        scientificName: "Sarkidiornis melanotos",
+        url: 'https://en.wikipedia.org/wiki/Knob-billed_duck'
+      },
+      {
+        commonName: "Northern Pintail",
+        scientificName: "Anas acuta",
+        url: 'https://en.wikipedia.org/wiki/Northern_pintail'
+      },
+      {
+        commonName: "Painted Stork",
+        scientificName: "Mycteria leucocephala",
+        url: 'https://en.wikipedia.org/wiki/Painted_stork'
+      },
+      {
+        commonName: "Purple Cochoa",
+        scientificName: "Cochoa purpurea",
+        url: 'https://en.wikipedia.org/wiki/Purple_cochoa'
+      },
+      {
+        commonName: "Red-headed Trogon",
+        scientificName: "Harpactes erythrocephalus",
+        url: 'https://en.wikipedia.org/wiki/Red-headed_trogon'
+      },
+      {
+        commonName: "Red-headed Vulture",
+        scientificName: "Sarcogyps calvus",
+        url: 'https://en.wikipedia.org/wiki/Red-headed_vulture'
+      },
+      {
+        commonName: "Red-necked Falcon",
+        scientificName: "Falco chicquera",
+        url: 'https://en.wikipedia.org/wiki/Red-necked_falcon'
+      },
+      {
+        commonName: "Ruby-cheeked Sunbird",
+        scientificName: "Anthreptes singalensis",
+        url: 'https://en.wikipedia.org/wiki/Ruby-cheeked_sunbird'
+      },
+      {
+        commonName: "Rusty-fronted Barwing",
+        scientificName: "Actinodura egertoni",
+        url: 'https://en.wikipedia.org/wiki/Rusty-fronted_barwing'
+      },
+      {
+        commonName: "Saker Falcon",
+        scientificName: "Falco cherrug",
+        url: 'https://en.wikipedia.org/wiki/Saker_falcon'
+      },
+      {
+        commonName: "Silver-eared Mesia",
+        scientificName: "Leiothrix argentauris",
+        url: 'https://en.wikipedia.org/wiki/Silver-eared_mesia'
+      },
+      {
+        commonName: "Slaty-legged Crake",
+        scientificName: "Rallina eurizonoides",
+        url: 'https://en.wikipedia.org/wiki/Slaty-legged_crake'
+      },
+      {
+        commonName: "Spot-bellied Eagle Owl",
+        scientificName: "Bubo nipalensis",
+        url: 'https://en.wikipedia.org/wiki/Spot-bellied_eagle-owl'
+      },
+      {
+        commonName: "Sultan Tit",
+        scientificName: "Melanochlora sultanea",
+        url: 'https://en.wikipedia.org/wiki/Sultan_tit'
+      },
+      {
+        commonName: "Swamp Francolin",
+        scientificName: "Francolinus gularis",
+        url: 'https://en.wikipedia.org/wiki/Swamp_francolin'
+      },
+      {
+        commonName: "Tawny-bellied Babbler",
+        scientificName: "Dumetia hyperythra",
+        url: 'https://en.wikipedia.org/wiki/Tawny-bellied_babbler'
+      },
+      {
+        commonName: "Thick-billed Green Pigeon",
+        scientificName: "Treron curvirostra",
+        url: 'https://en.wikipedia.org/wiki/Thick-billed_green_pigeon'
+      },
+      {
+        commonName: "White-throated Bulbul",
+        scientificName: "Alophoixus flaveolus",
+        url: 'https://en.wikipedia.org/wiki/White-throated_bulbul'
+      },
+      {
+        commonName: "White-throated Bushchat",
+        scientificName: "Saxicola insignis",
+        url: 'https://en.wikipedia.org/wiki/White-throated_bush_chat'
+      },
+      {
+        commonName: "Yellow-rumped Honeyguide",
+        scientificName: "Indicator xanthonotus",
+        url: 'https://en.wikipedia.org/wiki/Yellow-rumped_honeyguide'
+      },
+      {
+        commonName: "Yellow-vented Warbler",
+        scientificName: "Phylloscopus cantator",
+        url: 'https://en.wikipedia.org/wiki/Yellow-vented_warbler'
+      }
+    
+  ];
+
+  function createBirdSpeciesHTML(species) {
+      return `
+          <a href="${species.url}" class="w-auto mb-3 p-2 rounded-lg border-4 border-gray-600 hover:text-white hover:bg-purple hover:duration-200 hover:ease-in-out">
+              <li class="text-lg font-bold">${species.commonName}</li>
+              <li class="text-sm">${species.scientificName}</li>
+          </a>
+      `;
+  }
+  const container = document.getElementById("species-container"); 
+  birdSpecies.forEach(species => {
+      const speciesHTML = createBirdSpeciesHTML(species);
+      container.innerHTML += speciesHTML;
+  });
+</script>
+
 {% endblock %}

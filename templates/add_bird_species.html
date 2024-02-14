@@ -3,9 +3,9 @@
 {% block content %}
 
 <div class="container mx-auto my-8  flex flex-col items-center justify-center">
-    <div class=" mb-5">
+    <!-- <div class=" mb-5">
         <h1 class="font-bold text-2xl md:text-3xl m-0  text-slate-700 uppercase">ADD BIRD SPECIES DETAILS</h1>
-    </div>
+    </div> -->
     <form method="post" action="{% url 'add_bird_species' %}" class="w-full  bg-white rounded-md shadow-md p-8 ">
         {% csrf_token %}
 
@@ -48,6 +48,11 @@
         <div class="mb-1">
             <label for="bird_description" class="block text-gray-700 text-sm font-bold mb-2">Bird Description:</label>
             <textarea id="bird_description" name="bird_description" required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <div class="mb-1">
+            <label for="wiki_link" class="block text-gray-700 text-sm font-bold mb-2">Wikipedia Link:</label>
+            <textarea id="wiki_link" name="wiki_link" required
                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"></textarea>
         </div>
 

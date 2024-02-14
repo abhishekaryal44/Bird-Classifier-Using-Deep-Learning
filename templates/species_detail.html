@@ -15,16 +15,17 @@
                     <img src="{{ image_url }}" alt="Classified Image" class="w-full h-full object-cover" />
                 </div>
                 <div class="flex flex-col gap-2 md:gap-4 mt-1">
-                    <h2><span class="font-bold">Status Code:</span> {{ species.status_code }}</h2>
+                    <h2><span class="font-bold">Status Code:</span> {{ species.get_status_code_display  }}</h2>
                     <h3><span class="font-bold">Common Name:</span> {{ species.common_name }}</h3>
                     <h3><span class="font-bold">Scientific Name:</span> {{ species.scientific_name }}</h3>
-                    <h3><span class="font-bold">Current Status: </span>{{ species.current_status }}</h3>
+                    <h3><span class="font-bold">Current Status: </span>{{ species.get_current_status_display }}</h3>
                 </div>
             </div>
             <div class="flex flex-col  justify-center items-center mt-3">
                 <div class="mb-3">
                     <p><span class="font-bold text-xl">Bird Description: </span>{{ species.bird_description }}</p>
                 </div>
+                <a href=" {{species.wiki_link}}" class="font-bold text-white p-2 bg-purple rounded-md">{{species.common_name}} wikipedia</a>
                 <div class="m-3">
                     <p>Classified At: {{ current_time }}</p>
                 </div>

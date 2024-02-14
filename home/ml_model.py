@@ -98,16 +98,15 @@ from PIL import Image
 def predictClassLabel(image):
     # Load and preprocess the image
     img = Image.open(image)
-    img = img.resize((224, 224))  # Adjust the size based on your model's input size
+    img = img.resize((224, 224)) 
 
     # Convert the image to an array
-    img_array = np.array(img) / 255.0  # Normalize pixel values to be between 0 and 1
-    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
+    img_array = np.array(img) / 255.0  
+    img_array = np.expand_dims(img_array, axis=0)  
 
     # Make predictions
     predictions = model.predict(img_array)
 
-    # Assuming predictions is a one-hot encoded array, find the predicted class index
     predicted_class_index = np.argmax(predictions)
 
     # Print the predicted class label (replace 'class_labels' with your actual class labels)
